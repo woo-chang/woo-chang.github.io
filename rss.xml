@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[점이 모여 선으로]]></title><description><![CDATA[In a line of dots]]></description><link>https://woo-chang.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Apr 2022 22:38:17 GMT</lastBuildDate><item><title><![CDATA[Servlet(서블릿)이란]]></title><description><![CDATA[🚀 정의 📗 사전적 정의 자바를 사용하여 웹페이지를 동적으로 생성하는 서버 측 프로그램 혹은 그 사양을 말하며 웹 서버의 성능을 향상하기 위해 사용되는 의 일종입니다. HTML 안에 자바 코드를 담고 있는 와 다르게 자바 코드 안에 HTML…]]></description><link>https://woo-chang.github.io/spring/Servlet(서블릿)이란/</link><guid isPermaLink="false">https://woo-chang.github.io/spring/Servlet(서블릿)이란/</guid><pubDate>Mon, 25 Apr 2022 22:04:38 GMT</pubDate><content:encoded>&lt;h2 id=&quot;-정의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%A0%95%EC%9D%98&quot; aria-label=&quot; 정의 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 정의&lt;/h2&gt;
+&lt;h3 id=&quot;-사전적-정의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%82%AC%EC%A0%84%EC%A0%81-%EC%A0%95%EC%9D%98&quot; aria-label=&quot; 사전적 정의 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📗 사전적 정의&lt;/h3&gt;
+&lt;p&gt;자바를 사용하여 웹페이지를 동적으로 생성하는 서버 측 프로그램 혹은 그 사양을 말하며 웹 서버의 성능을 향상하기 위해 사용되는 &lt;code class=&quot;language-text&quot;&gt;자바 클래스&lt;/code&gt;의 일종입니다. HTML 안에 자바 코드를 담고 있는 &lt;code class=&quot;language-text&quot;&gt;JSP&lt;/code&gt;와 다르게 자바 코드 안에 HTML을 담고 있는 것이 특징입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;정적 웹페이지&lt;/code&gt;는 서버에 있는 HTML+CSS를 그대로 보여주는 것&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;파일 경로 이름을 바탕으로 &lt;code class=&quot;language-text&quot;&gt;Web Server&lt;/code&gt;가 일치하는 content를 반환하게 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;동적 웹페이지&lt;/code&gt;는 상황에 따라 데이터를 추가/가공해서 보여주는 것&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요청 인자에 알맞게 동적으로 content를 생산하여 &lt;code class=&quot;language-text&quot;&gt;Web Application Server&lt;/code&gt;가 content를 반환하게 됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;-스프링부트에서의-정의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8%EC%97%90%EC%84%9C%EC%9D%98-%EC%A0%95%EC%9D%98&quot; aria-label=&quot; 스프링부트에서의 정의 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📗 스프링부트에서의 정의&lt;/h3&gt;
+&lt;p&gt;서블릿은 &lt;code class=&quot;language-text&quot;&gt;Tomcat&lt;/code&gt; 같은 웹 애플리케이션 서버를 설치하고 서블릿 코드를 빌드해서 클래스 파일로 만든 뒤 서버를 실행해서 동작하게 됩니다.&lt;/p&gt;
+&lt;p&gt;스프링부트에서는 톰캣 서버를 내장하고 있기에 서블릿 코드를 간편하게 실행할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1076px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 94.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAACeUlEQVQ4y5VUy27aUBDl77qssm0X7S+06/ZHumikRgpSF4g2ERJqlYcCiQBREKWQhDfhETsQMA/b2MCpz6iXOqmJ1JGOru/1zJkzM9cOIcDW67Ws9tJE3Sh6+IWGh9roJ4ZzHbZl00v8lK+yUBDhar2StWPU8PbLDt4fv8C7by/x5utzxEuf0a53/o/wj8yNsz4coNZoBlbx2EJPlbxeOZgaGrR+DQO9ipU7wMKewHHc7QrVoR+r1VJezqfX+PThGbKJ10h+f4Xj2A5+pD/iutJ6QOjH9pLFSDzFaFhDu1Xwnicej/VkhCicz+cC0zR94JkJy3bR7Wm46fThuGvv3IZlmY98TcxmMyyXS4QWiwW63S7u7+9xd3cHTdOg67o8E4YxxmRieGcaer2uh94/UDHj8Rghx3Ek8OrqCs1mU56ZoNVqCVzXFfU8Z3KlyLIsgW3bXsKJvOcqCrnJZDJIJBLY29vD/v4+kskkLi8vJWg6nQpZPp/H7u4u0uk0Dg4OEA6H0W63pXcUIYRUSNkMYHAul0O1WpV+MDvVsT8E9yQtl8tIpVKoVCpgPNHv9/8SsgcEHZmdpI1GQ5QzCcmoknZ2doZYLIbDw0NpEY1iHhDe3t5iOBwKaalUkn4OBgOMRqPNBAna6ekpTk5OEI/HUSwWgwnVRjWXE1Ol+kumZbNZqeL8/Bz1ej2YUI2dTsx8dHSEQqEgZ6pkRRiNRhGJRGRwFxcX2xUahiFBilz1za9UfmneYNTV4ZWiceVgN4TqEvOAJP7yOW2qZCJeXCZW4J595kdBCCEzUiGDFJGCuir+SQeBaknOwYaoQH02QaACYtt7pZq3gm35DavXmWxIHWrhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;servlet-01&quot;
+        title=&quot;servlet-01&quot;
+        src=&quot;/static/1f14329963cd01a23b3a0f2ddc9222f1/84ee5/servlet-01.png&quot;
+        srcset=&quot;/static/1f14329963cd01a23b3a0f2ddc9222f1/5a46d/servlet-01.png 300w,
+/static/1f14329963cd01a23b3a0f2ddc9222f1/0a47e/servlet-01.png 600w,
+/static/1f14329963cd01a23b3a0f2ddc9222f1/84ee5/servlet-01.png 1076w&quot;
+        sizes=&quot;(max-width: 1076px) 100vw, 1076px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;스프링부트 프로젝트를 생성하고 내장 Tomcat 서버를 실행하게 되면 존재하는 서블릿 코드를 탐색하게 되고 &lt;code class=&quot;language-text&quot;&gt;서블릿 컨테이너&lt;/code&gt;가 이를 관리하게 됩니다.&lt;/li&gt;
+&lt;li&gt;Http 요청과 응답에 대한 &lt;code class=&quot;language-text&quot;&gt;HttpServletRequest&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;HttpServletResponse&lt;/code&gt;를 서블릿 코드에서 처리할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%97%AD%ED%95%A0&quot; aria-label=&quot; 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 역할&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1200px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABMElEQVQoz12SS4+CQBCE+f9/x5NXvBiJB0OUxMQIHgBfKCICKrb5anc2ZDvpzKumqqtnvNfrZS4/n48Rfd9rLIrCDoeDXa9XzU+nk+b7/d7O57PWjGDyPLfn82kegPv9LmBd11aWpW23W3s8HiKJosjm87lyt9tpH/x6vRaOc+5C3nWdefYbVAeQSpum0Yg6ypPJRIS3202CbduKyPd9m81mEjkejz+EYRjadDqVIkTDoELsxXGsrKpKpLQkTVMbj8e2XC6FBSfL2IQIFeYkYC5BiHKSJLLrCN/vt202GxuNRhYEgbD0URVSPnYhdZYgYf9yuViWZYaL1WqlM9K1Y7FYSIz7fxXSN6py/RsGzaYqlBEAxyX2WFMpZ+4BRWj/ArXht3Ffg5H18AvhxO07y1+qp152Ald7bAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;servlet-02&quot;
+        title=&quot;servlet-02&quot;
+        src=&quot;/static/a37ae7c801bfebdb88c635d07722b9c7/c1b63/servlet-02.png&quot;
+        srcset=&quot;/static/a37ae7c801bfebdb88c635d07722b9c7/5a46d/servlet-02.png 300w,
+/static/a37ae7c801bfebdb88c635d07722b9c7/0a47e/servlet-02.png 600w,
+/static/a37ae7c801bfebdb88c635d07722b9c7/c1b63/servlet-02.png 1200w,
+/static/a37ae7c801bfebdb88c635d07722b9c7/010dc/servlet-02.png 1714w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 브라우저에서 실행 중인 서버로 요청이 들어오면 요청에 알맞은 처리 이후 응답해주는 작업이 필요한데 HTTP 요청 메시지를 직접 파싱하고 HTTP 응답을 직접 관리하기에는 불편한 점이 존재합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HttpServletRequest&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;개발자가 HTTP 요청 메시지를 편리하게 사용할 수 있도록 개발자 대신 HTTP 요청 메시지를 파싱해서 그 결과를 &lt;code class=&quot;language-text&quot;&gt;HttpServletRequest&lt;/code&gt; 객체에 담아서 제공합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;START LINE&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 메소드&lt;/li&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;li&gt;쿼리 파라미터&lt;/li&gt;
+&lt;li&gt;스키마, 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP Header&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;헤더 정보&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP Body&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Form 파라미터 정보&lt;/li&gt;
+&lt;li&gt;message body 데이터&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그 외에도 HTTP 요청 시작부터 종료까지 유지되는 &lt;code class=&quot;language-text&quot;&gt;임시 저장소 기능&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;세션 관리 기능&lt;/code&gt;을 제공합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HttpServletResponse&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;개발자가 HTTP 응답 메시지를 편리하게 생성할 수 있도록 편의 기능을 제공합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP 응답 메시지 생성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 응답 코드 생성&lt;/li&gt;
+&lt;li&gt;HTTP 응답 헤더 생성&lt;/li&gt;
+&lt;li&gt;HTTP 응답 바디 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그 외에도 &lt;code class=&quot;language-text&quot;&gt;Content-Type&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;쿠키&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Redirect&lt;/code&gt; 등을 지정할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;-동작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%8F%99%EC%9E%91&quot; aria-label=&quot; 동작 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 동작&lt;/h2&gt;
+&lt;h3 id=&quot;-서블릿-등록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%84%9C%EB%B8%94%EB%A6%BF-%EB%93%B1%EB%A1%9D&quot; aria-label=&quot; 서블릿 등록 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📝 서블릿 등록&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@WebServlet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;servletExample&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; urlPatterns &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/servlet-example&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ServletExample&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HttpServlet&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;HttpServletRequest&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HttpServletResponse&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;@WebServlet&lt;/code&gt; : 서블릿 애노테이션으로 서블릿 이름을 지정하고 URL 매핑을 할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;서버의 기본 URL이 &lt;code class=&quot;language-text&quot;&gt;http://localhost:8080&lt;/code&gt;일 때 웹 브라우저에서 &lt;code class=&quot;language-text&quot;&gt;http://localhost:8080/servlet-example&lt;/code&gt;로 요청이 들어오게 되면 해당 Servlet 클래스 코드가 실행됩니다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URL이 호출되면 서블릿 컨테이너는 &lt;code class=&quot;language-text&quot;&gt;service()&lt;/code&gt; 메서드를 호출하는데 &lt;code class=&quot;language-text&quot;&gt;HttpServlet&lt;/code&gt; 추상 클래스를 상속받아 해당 메서드를 &lt;code class=&quot;language-text&quot;&gt;Override&lt;/code&gt; 해서 사용합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;원하는 동작을 해당 메서드 안에서 구현합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;-서블릿-스캔&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%84%9C%EB%B8%94%EB%A6%BF-%EC%8A%A4%EC%BA%94&quot; aria-label=&quot; 서블릿 스캔 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📝 서블릿 스캔&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@ServletComponentScan&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ServletApplication&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token class-name&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ServletApplication&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;@ServletComponentScan&lt;/code&gt; : 등록된 서블릿을 스캔해서 빈으로 등록합니다. 빈으로 등록되어 있기에 요청 때마다 생성되는 것이 아닌 싱글톤으로 관리되어 성능에 도움을 줄 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot; 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 참고&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard&quot;&gt;스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[Your name Thank you for reading my resume. If you want to contact me, Please send me an email.]]></description><link>https://woo-chang.github.io/resume-en/</link><guid isPermaLink="false">https://woo-chang.github.io/resume-en/</guid><pubDate>Sun, 27 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-name&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#your-name&quot; aria-label=&quot;your name permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Your name&lt;/h1&gt;
+&lt;div align=&quot;center&quot;&gt;
+&lt;p&gt;&lt;em&gt;Thank you for reading my resume. If you want to contact me, Please send me an email.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item></channel></rss>
