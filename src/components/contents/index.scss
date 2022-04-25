@@ -1,0 +1,22 @@
+h3 {
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+ul {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    li {
+        margin-bottom: calc(0.8125rem / 2);
+    }
+}
+
+.gatsby-resp-image-wrapper {
+    margin: 20px 0 20px 0;
+    width: 80%;
+}

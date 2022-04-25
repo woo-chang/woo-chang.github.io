@@ -17,10 +17,18 @@ import * as ScrollManager from '../utils/scroll'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
+import '../styles/toc.css'
+import { TOC_CARD } from '../utils/toc'
 
 export default ({ data, pageContext, location }) => {
   useEffect(() => {
     ScrollManager.init()
+
+    TOC_CARD.init()
+    window.onscroll = function() {
+      TOC_CARD.onscroll()
+    }
+
     return () => ScrollManager.destroy()
   }, [])
 
