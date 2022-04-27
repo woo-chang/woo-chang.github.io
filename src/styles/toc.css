@@ -58,11 +58,11 @@
 
 .toc-active,
 .toc-common:hover {
-    color: #008408;
+    color: #ff8489;
 }
 
 .toc-parent-active {
-    color: #A1C7A0;
+    color: #eec0c6;
 }
 
 @media (max-width: 83.75rem) {
