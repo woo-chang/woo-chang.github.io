@@ -4,6 +4,14 @@ module.exports = {
   siteMetadata: metaConfig,
   plugins: [
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: metaConfig.ga, // your google analytics tracking id
+        head: false, // Puts tracking script in the head instead of the body
+        anonymize: true, // enable ip anonymization
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
