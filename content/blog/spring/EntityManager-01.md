@@ -52,3 +52,146 @@ EntityManager em = emf.createEntityManager();
 - EntityManager는 트랜잭션이 발생할 때 DB 커넥션 풀에서 커넥션을 얻어 사용합니다.
 
 ## 문제
+
+```java
+@Builder
+@Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "title")
+public class TitleEntity {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  @Column(length = 50)
+  private String title;
+
+  @Column(length = 40)
+  private String type;
+
+  @OneToMany(mappedBy = "title", cascade = CascadeType.REMOVE)
+  @Builder.Default
+  private List<SubtitleEntity> subtitles = new ArrayList<>();
+
+}
+```
+
+```java
+@Builder
+@Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "subtitle")
+public class SubtitleEntity {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  @Column(length = 250)
+  private String subtitle;
+
+  @Column(name = "display_order", nullable = false)
+  private Integer displayOrder;
+
+  @ManyToOne
+  @JoinColumn(name = "title_id", nullable = false)
+  private TitleEntity title;
+
+}
+```
+
+- `title`과 `subtitle`을 양방향 연관관계로 지정
+
+```java
+@Test
+@DisplayName("연결된 서브타이틀과 함께 페이지 블럭 타이틀 조회")
+void getTitleWithSubtitle() {
+    // given
+    TitleEntity title = TitleEntity.builder()
+        .title("Entity Manager 소개글")
+        .type("test")
+        .build();
+
+    TitleEntity savedTitle = TitleRepository.save(title);
+
+    SubtitleEntity subtitle = SubtitleEntity.builder()
+        .subtitle("Entity란?")
+        .displayOrder(1)
+        .title(savedTitle)
+        .build();
+
+    SubtitleRepository.save(subtitle);
+
+    // when
+    List<TitleEntity> titles = TitleRepository.findAllByType("test");
+
+    // then
+    assertThat(titles.size()).isEqualTo(1);
+    assertThat(titles.get(0).getSubtitles().size()).isEqualTo(1);
+    assertThat(titles.get(0).getSubtitles().get(0).getSubtitle()).isEqualTo("Entity란?");
+}
+```
+
+- title과 하위 subtitle을 저장했을 때 title을 불러오면 `연관된 subtitle`이 같이 불러와지는 테스트 코드 작성
+
+![EntityManager-02](./images/EntityManager/EntityManager-02.png)
+
+하지만 예상했던 결과와 다르게 **하위 subtitle을 불러오지 못하는 문제**가 발생했습니다.<br>
+그 원인은 1차 캐시를 해서 영속성 컨텍스트에 저장된 연관관계를 그대로 가져오기에 발생하는 문제였습니다.
+
+title은 subtitle 없이 영속성 컨텍스트에 들어가 있고 1차 캐시로 인해 없는 상태 그대로 가져오게 됩니다.<br>
+이를 해결해주기 위해서는 영속성 컨텍스트 캐시를 `초기화`시켜주는 작업이 필요했습니다.
+
+## 해결
+
+```java
+@Test
+@DisplayName("연결된 서브타이틀과 함께 페이지 블럭 타이틀 조회")
+void getTitleWithSubtitle() {
+    // given
+    TitleEntity title = TitleEntity.builder()
+        .title("Entity Manager 소개글")
+        .type("test")
+        .build();
+
+    TitleEntity savedTitle = TitleRepository.save(title);
+
+    SubtitleEntity subtitle = SubtitleEntity.builder()
+        .subtitle("Entity란?")
+        .displayOrder(1)
+        .title(savedTitle)
+        .build();
+
+    SubtitleRepository.save(subtitle);
+
+    // when
+    // 영속성 컨텍스트에 저장되어 있는 값을 지워버린다
+    entityManager.clear();
+
+    List<TitleEntity> titles = TitleRepository.findAllByType("test");
+
+    // then
+    assertThat(titles.size()).isEqualTo(1);
+    assertThat(titles.get(0).getSubtitles().size()).isEqualTo(1);
+    assertThat(titles.get(0).getSubtitles().get(0).getSubtitle()).isEqualTo("Entity란?");
+}
+```
+
+- entityManager를 이용해 영속성 컨텍스트를 초기화시켜 제대로 된 `select` 문으로 가져오게 처리합니다.
+- 테스트 의도대로 수행
+
+### EntityManager 주요 메서드
+
+그 외에도 주로 사용되는 메서드는 다음과 같습니다.
+
+- `persist()` : 실제 DB에 저장하는 것이 아닌 영속성 컨텍스트에 Entity 영속화
+- `detach()` : 영속성 컨텍스트에 저장되었다가 분리된 상태, 준영속 상태
+- `remove()` : 실제 DB에 삭제를 요청한 상태
+- `flush()` : 영속성 컨텍스트에 있는 데이터를 DB로 쿼리 전송, 실제 DB에 반영되지는 않는다, 변경 내용을 DB와 동기화하는 작업
+- `commit()` : 실제 쿼리가 실행되는 단계, DB 변화 발생
+- `clear()` : 영속성 컨텍스트의 데이터를 제거, 실제 DB에서 지워지는 것은 아니다
