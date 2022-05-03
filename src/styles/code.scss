@@ -27,15 +27,17 @@ pre[class*='language-'] {
   color: #191919;
   // default : #e0e0e0
   background: none;
-  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono',
-    monospace;
+  font-family: "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
+  // default : 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.6;
+  line-height: 1.5;
+  // default : 1.6
   font-size: 13px;
+  // default : 13
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -64,7 +66,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #F6F8FA;
+  background: #F4F2F0;
   //default : #212121
 }
 
@@ -82,11 +84,12 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #616161;
+  color: #768291;
+  // default : #616161
 }
 
 .token.punctuation {
-  color: #191919
+  color: #9B9B9B
   // default : #e0e0e0;
 }
 
@@ -102,18 +105,27 @@ pre[class*='language-'] {
 }
 
 .token.boolean,
-.token.number,
+.token.number {
+  // default : 아래와 결합
+  color: #973264;
+}
+
 .token.function {
-  color: #4B7BE7
+  color: #CF5F73
   // default : #ff9100;
 }
 
 .token.property,
-.token.class-name,
 .token.constant,
 .token.symbol {
-  color: #BD8C38
+  color: #CF5F73
   //default : #ffff00 ;
+}
+
+.token.class-name {
+  // default : 위와 결합
+  color: #191919;
+  font-weight: 500;
 }
 
 .token.selector,
@@ -121,7 +133,7 @@ pre[class*='language-'] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-  color: #9F42A4
+  color: #3F7FAC
   //default : #b388ff;
 }
 
@@ -130,14 +142,15 @@ pre[class*='language-'] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-  color: #659E58;
+  color: #759A32;
   // default : #00e676
 }
 
 .token.operator,
 .token.entity,
 .token.url {
-  color: #67cdcc;
+  color: #9B7950;
+  // default : #67cdcc
 }
 
 .token.important,
