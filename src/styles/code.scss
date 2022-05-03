@@ -72,7 +72,9 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  padding: 0.1em 0.6em;
+  padding: 0.1em 0.4em;
+  // default : 0.1em 0.6em
+  font-weight: 600;
   border-radius: 0.2em;
   white-space: normal;
   background: $inline-dimmed-color;
