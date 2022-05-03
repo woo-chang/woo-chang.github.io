@@ -36,7 +36,7 @@ pre[class*='language-'] {
   word-wrap: normal;
   line-height: 1.5;
   // default : 1.6
-  font-size: 13px;
+  font-size: 14px;
   // default : 13
 
   -moz-tab-size: 2;
@@ -125,7 +125,7 @@ pre[class*='language-'] {
 .token.class-name {
   // default : 위와 결합
   color: #191919;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .token.selector,
