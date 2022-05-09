@@ -9,8 +9,15 @@
   transition: text-shadow 0.3s, opacity 0.4s;
   opacity: 0;
 
+  h3 {
+    font-family: "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;;
+    //@debug: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+
   p {
-    font-size: 90%;
+    font-size: 95%;
     line-height: 1.4;
   }
 }
