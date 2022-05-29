@@ -1,5 +1,5 @@
 module.exports = {
-  title: `점이 모여 선으로`,
+  title: `한 페이지가 될 수 있게`,
   description: `In a line of dots`,
   author: `woo-chang`,
   introduction: `Beautiful things have thorns`,
